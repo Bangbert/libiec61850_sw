@@ -52,7 +52,8 @@
 #cmakedefine01 CONFIG_ACTIVATE_TCP_KEEPALIVE
 
 /* time (in s) between last message and first keepalive message */
-#define CONFIG_TCP_KEEPALIVE_IDLE 5
+//#define CONFIG_TCP_KEEPALIVE_IDLE 5
+#define CONFIG_TCP_KEEPALIVE_IDLE 100
 
 /* time between subsequent keepalive messages if no ack received */
 #define CONFIG_TCP_KEEPALIVE_INTERVAL 2

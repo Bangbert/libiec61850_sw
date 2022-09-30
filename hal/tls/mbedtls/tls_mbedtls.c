@@ -202,7 +202,7 @@ TLSConfiguration_create()
         mbedtls_ctr_drbg_seed( &(self->ctr_drbg), mbedtls_entropy_func, &(self->entropy), NULL, 0);
         mbedtls_ssl_conf_rng( &(self->conf), mbedtls_ctr_drbg_random, &(self->ctr_drbg) );
 
-        mbedtls_ssl_conf_authmode(&(self->conf), MBEDTLS_SSL_VERIFY_REQUIRED);
+        mbedtls_ssl_conf_authmode(&(self->conf), MBEDTLS_SSL_VERIFY_NONE); // Chnge from  mbedtls_ssl_conf_authmode(&(self->conf), MBEDTLS_SSL_VERIFY_REQUIRED);
 
         mbedtls_ssl_conf_renegotiation(&(self->conf), MBEDTLS_SSL_RENEGOTIATION_ENABLED);
 
